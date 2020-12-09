@@ -22,7 +22,7 @@ Route::get('/index','UsersController@index');
 Route::get('/','RestaurantsController@restaurants');
 
 //-------------------- top-------------------------
-Route::get('/api/users','APIController@search');
+Route::get('/api/allWines','APIController@search');
 
 Route::get('/api/top', 'RestaurantsController@top');
 

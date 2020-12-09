@@ -17,9 +17,9 @@ class CreateRestaurantsTable extends Migration
             $table->id();
             $table->text('picture')->nullable();
             $table->string('restaurant_name')->nullable();
-            $table->string('color_id')->nullable();
-            $table->string('cuisine_id')->nullable();
-            $table->string('price_id')->nullable();
+            $table->unsignedInteger('price_range')->nullable();
+            $table->string('cuisine')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

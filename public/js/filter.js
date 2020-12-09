@@ -31220,7 +31220,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\VineMe\resources\js\filter\index.jsx */"./resources/js/filter/index.jsx");
+module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\WineMe\resources\js\filter\index.jsx */"./resources/js/filter/index.jsx");
 
 
 /***/ })
