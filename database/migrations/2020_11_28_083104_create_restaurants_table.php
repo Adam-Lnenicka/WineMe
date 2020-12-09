@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateRestaurantsTable extends Migration
 {
-    /**
+    /**f
      * Run the migrations.
      *
      * @return void
@@ -17,9 +17,7 @@ class CreateRestaurantsTable extends Migration
             $table->id();
             $table->text('picture')->nullable();
             $table->string('restaurant_name')->nullable();
-            $table->unsignedInteger('price_range')->nullable();
-            $table->string('cuisine')->nullable();
-            $table->string('email')->nullable();
+
             $table->timestamps();
         });
     }

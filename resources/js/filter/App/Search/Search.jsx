@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchResults from "./SearchResults.jsx";
 
 
+
 function Search() {
     const [cuisine, setCuisine] = useState("");
     const [color, setColor] = useState("");
@@ -13,7 +14,7 @@ function Search() {
     const [page, setPage] = useState(0);
     const [hasMore, setHasMore] = useState(true);
 
-    const url = "/api/wines";
+    const url = "/api/recipes";
 
     const searchRecipes = async () => {
         let url_with_params = url + "?";
@@ -72,15 +73,20 @@ function Search() {
                 >
                     <span className="category">
                         <label className="label" htmlFor="color">
-                            Color
+                            Time
                         </label>
-      
+                        <img
+                            className="category-img"
+                            src="/images/time.png"
+                            height="30px"
+                            width="30px"
+                        />
                         <select
                             className="drop-down"
                             name="color"
                             onChange={selectColor}
                         >
-                            <option value="">Color</option>
+                            <option value="">I have nothing but time!</option>
                             <option value="red">red</option>
                             <option value="white">white</option>
                             <option value="rose">rose</option>
@@ -91,14 +97,19 @@ function Search() {
                         <label className="label" htmlFor="cuisine">
                             Cuisine
                         </label>
-
+                        <img
+                            className="category-img"
+                            src="/images/cuisine.png"
+                            height="30px"
+                            width="30px"
+                        />
                         <select
                             className="drop-down"
                             name="cuisine"
                             onChange={selectCuisine}
                         >
                             <option value="">
-                                Origin
+                                Pick the most delicious one!
                             </option>
                             <option value="Western">Western</option>
                             <option value="Asian">Asian</option>
@@ -114,30 +125,35 @@ function Search() {
                     </span>
 
                     <span className="category">
-                        <label className="label" htmlFor="price">
+                        <label className="label" htmlFor="diet">
                             Diet
                         </label>
-   
+                        <img
+                            className="category-img"
+                            src="/images/diet.png"
+                            height="30px"
+                            width="30px"
+                        />
                         <select
                             className="drop-down"
-                            name="price"
+                            name="diet"
                             onChange={selectDiet}
                         >
-                            <option value="">Price!</option>
-                            <option value="$">$</option>
-                            <option value="$$">$$</option>
-                            <option value="$$$">$$$</option>
+                            <option value="">Suprise me!</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="pescatarian">Pescatarian</option>
+                            <option value="dairy-free">Dairy-free</option>
                         </select>
                     </span>
 
                     <span className="category">
                         <button className="recipe-btn" type="submit">
-                            Select Your Wine!
+                            Take me to the recipes!
                         </button>
                     </span>
                 </form>
                 <div className="results__container">
-                    <h2 className="check-out">Waiting for your. . .</h2>
+                    <h2 className="check-out">Check out the latest recipes. . .</h2>
 
                     <SearchResults recipes={recipes} />
 

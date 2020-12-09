@@ -35,7 +35,7 @@ Route::post('/','RestaurantsController@store');
 Route::post('restaurant/{id}/review','RestaurantsController@storeReview');
 
 // json
-Route::get('api/wines', 'ApiController@filter');
+Route::get('api/recipes', 'ApiController@recipes');
 
 Route::view('/search', 'search');
 

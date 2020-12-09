@@ -44,11 +44,7 @@ class RestaurantSeeder extends Seeder
 
             $u = new \App\Models\Restaurant;
             $u->picture = $item->picture;
-            $u->restaurant_name = $item->restaurant_name;
-            $u->color = $item->color_id;
-            $u->cuisine = $item->cuisine_id;
-            $u->price = $item->price_id;
-          
+            $u->restaurant_name = $item->restaurant_name;       
             $u->save();
           }
     }

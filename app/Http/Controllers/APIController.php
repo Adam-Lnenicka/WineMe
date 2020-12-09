@@ -21,30 +21,31 @@ class APIController extends Controller
         return $restaurants;
     }
 
-    public function filter(Request $request) {
-        $cuisine_input = $request->input('cuisine', null);
+    public function recipes(Request $request) {
+        $cuisine_input = $request->input('cuisine', null); //asian
         $color_input = $request->input('color', null); 
-        $price_input = $request->input('price', null); 
+        $diet_input = $request->input('diet', null); 
         $page = $request->input('page', 0);
 
         $recipes = Recipe::query();
 
         if($cuisine_input !== null){
-            $cuisine_id = Cuisine::where('cuisine', $cuisine_input)->value('id'); 
+            $cuisine_id = Cuisine::where('name', $cuisine_input)->value('id'); // 1
+            // dd($cuisine_id);
         	$recipes->where('cuisine_id', $cuisine_id);
         }
 
         if($color_input !== null){
-        	$color_id = Color::where('color', $color_input)->value('id'); 
-        	$recipes->where('total_color_id', $color_id);
+        	$color_id = Color::where('color', $color_input)->value('id'); // 1
+        	$recipes->where('color_id', $color_id);
         }
 
-        if($price_input !== null){
-        	$price_id = Price::where('price', $price_input)->value('id'); 
-        	$recipes->where('price_id', $price_id);
+        if($diet_input !== null){
+        	$diet_id = Diet::where('name', $diet_input)->value('id'); // 1
+        	$recipes->where('diet_id', $diet_id);
         }
 
-        $recipes = $recipes->offset(4 * $page)->limit(10)->orderBy('id', 'desc')->get();
-        return compact('wines');
+        $recipes = $recipes->offset(4 * $page)->limit(4)->orderBy('id', 'desc')->get();
+        return compact('recipes');
     }
 }
