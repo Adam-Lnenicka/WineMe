@@ -29,62 +29,9 @@
 </div>
 <div class="center">
 
-
-
-    <div id="app"></div>
-  
-    
-    
-
-
-        <table class="table">
-
-        
-            <thead>
-                <th>
-                    
-            
-                    <td class="row1">
-                        User Image
-                    </td>
-                    <td class="row2">
-                        Name
-                    </td>
-                    <td class="row3">
-                        Handy points
-                    </td>  
-                    <td class="row4">
-                        Hopeful/Helpmate
-                    </td>
-                    <td class="row5">
-                        Service
-                    </td>
-                    <td class="row6">
-                        Email
-                    </td>
-
-                </th>
-            </thead>
-            <tbody>
-                @foreach ($restaurants as $restaurant)
-                
-                    <tr>
-                        <td></td>
-                        
-
-                        
-                        <td class="row2"style=""><a class="link" href="">{{ $restaurant->restaurant_name }}</a></td>
-                        <td class="row3"style="">{{ $restaurant->price_range }}</td>
-                        <td class="row4">{{ $restaurant->quisine }}</td>
-
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-        <script src="{{ mix('js/app.js') }}"></script>
+   <div id="app"></div>
+  <script src="{{ mix('js/app.js') }}"></script>
   
 </div>
 
-
-
-    @endsection
+@endsection

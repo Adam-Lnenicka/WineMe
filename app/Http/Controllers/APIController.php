@@ -22,12 +22,12 @@ class APIController extends Controller
     }
 
     public function recipes(Request $request) {
-        $cuisine_input = $request->input('cuisine', null); //asian
+        $cuisine_input = $request->input('cuisine', null); 
         $color_input = $request->input('color', null); 
         $diet_input = $request->input('diet', null); 
         $page = $request->input('page', 0);
 
-        $recipes = Recipe::query();
+        $recipes = Restaurant::query();
 
         if($cuisine_input !== null){
             $cuisine_id = Cuisine::where('name', $cuisine_input)->value('id'); // 1
@@ -41,7 +41,7 @@ class APIController extends Controller
         }
 
         if($diet_input !== null){
-        	$diet_id = Diet::where('name', $diet_input)->value('id'); // 1
+        	$diet_id = Wine::where('name', $diet_input)->value('id'); // 1
         	$recipes->where('diet_id', $diet_id);
         }
 

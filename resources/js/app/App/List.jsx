@@ -50,10 +50,10 @@ export default function List(props) {
             <>
                 <ul>
                     {
-                        data.map(movie => (
-                            <li key={ movie.id }>
-                                { movie.restaurant_name }
-                                <div className="rating">{ movie.price_range }</div>
+                        data.map(wine => (
+                            <li key={ wine.id }>
+                                { wine.restaurant_name }
+                                <div className="rating">{ wine.price_range }</div>
                             </li>
                         ))
                     }

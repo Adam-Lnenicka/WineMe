@@ -64,7 +64,6 @@ export default function AllRestaurants(props) {
                                 <p> Restaurant name:<a href={"/restaurant/"+ wine.id}>{wine.restaurant_name}</a></p>
                                 <p>Cuisine:{ wine.cuisine }</p>
                                 <div>Price range:{ wine.price_range }</div>
-                                <FaBeer/>
                             </div>
                         </div>
                             
