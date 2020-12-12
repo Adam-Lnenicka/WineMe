@@ -27,7 +27,7 @@
 @foreach($restaurant->reviews as $review)
     <hr/>
     <p>{{ $review->text }}</p>
-    <strong>{{ $review->rating }} / 100</strong>
+    <strong>{{ $review->rating }}</strong>
 @endforeach
 
 
