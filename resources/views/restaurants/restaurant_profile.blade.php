@@ -2,32 +2,38 @@
 @extends('layouts.app')
 
 @section('content')
-<div>
+<div class="profile-container">
+    <h1>Restaurant Profile</h1>
+    <div>
+        <p>{{ $restaurant->restaurant_name }}</p>
+        <p>{{ $restaurant->price_range }}</p>
+        <p>{{ $restaurant->cuisine }}</p>
+    </div>
+    
+    <h3>Submit a Review</h3>
+    <form method="post" action="{{ action('RestaurantsController@storeReview', [$restaurant->id]) }}">
+        @csrf
+        <div>
+            <label for ="rating">Your Rating </label>
+            <input type="number" id="rating" name="rating" min="1" max="5"></inpu>
+        </div>
+        <div>
+            <label for ="text">Text</label>
+            <br>
+            <textarea type="text" name="text" col ="200" row="4"></textarea>
+        </div>
 
-<p>{{ $restaurant->restaurant_name }}</p>
-<p>{{ $restaurant->price_range }}</p>
-<p>{{ $restaurant->cuisine }}</p>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <h3>User Reviews</h3>
 </div>
-
-
-<form method="post" action="{{ action('RestaurantsController@storeReview', [$restaurant->id]) }}">
-    @csrf
-    <p>
-        <label>Rating </label>
-        <input type="number" name="rating"/>
-    </p>
-    <p>
-        <label>Text</label>
-        <input type="text" name="text"/>
-    </p>
-
-    <input type="submit">
-</form>
-
 @foreach($restaurant->reviews as $review)
-    <hr/>
-    <p>{{ $review->text }}</p>
-    <strong>{{ $review->rating }}</strong>
+    <div class ="rating-box">
+        <strong>Rating: {{ $review->rating }}</strong><i class="fa fa-star" aria-hidden="true"></i>
+        <br>
+        <p>{{ $review->text }}</p>
+    </div>
 @endforeach
 
 
