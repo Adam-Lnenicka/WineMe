@@ -20,6 +20,9 @@ class CreateRestaurantsTable extends Migration
             $table->string('price_range')->nullable();
             $table->string('size')->nullable();
             $table->string('description')->nullable();
+            $table->unsignedInteger('price_id')->nullable();
+            $table->unsignedInteger('color_id')->nullable();
+            $table->unsignedInteger('cuisine_id')->nullable();
             $table->timestamps();
         });
     }

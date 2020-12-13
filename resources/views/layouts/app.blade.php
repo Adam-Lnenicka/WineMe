@@ -6,29 +6,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 <body>
-<nav class=" navbar navbar-expand-sm w-100 navbar-light">
+<nav class=" navbar navbar-expand-sm w-100 navbar-light bg-light">
             <img  class=""src="{{ Croppa::url('/media/logo.png','100', '50') }}" alt="Logo">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+  
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item pl-3">
-                  <a class="nav-link" href="#testimonials">Testimonials</a>
-                </li>
-                <li class="nav-item pl-3">
-                  <a class="nav-link" href="#services">Services</a>
-                </li>
-                <li class="nav-item pl-3">
-                  <a class="nav-link" href="#contact-us">Contact Us</a>
-                </li>
-              </ul>
+
             </div>
           </nav>
     <main>

@@ -1,0 +1,67 @@
+.profile-container{
+    margin: 0em 2em;
+
+    font-family: 'Nunito';
+}
+
+
+
+
+.detail{
+    background-color: rgb(46, 17, 17);
+    border-radius: 1em; 
+    display: flex;
+    padding: 2em;
+    color: white
+
+}
+
+
+
+.profile-image{
+    width: 400px;
+    min-width: 400px;
+    height: auto;
+    overflow:hidden;
+    object-fit: cover;
+
+
+}
+
+.restaurant-text{
+    padding: 0em 2em
+}
+
+.user-reviews{
+    margin: 1em 0;
+}
+
+label{
+    font-weight: 700;
+}
+
+input, textarea{
+    border: none;
+    background-color: rgb(233, 233, 233);
+    border-radius: 1em;
+    
+    .btn{
+    
+        background-color: gray;
+        border-radius: 1em;        
+        font-weight: 700;
+        letter-spacing:0.4px;
+    }
+}
+
+textarea{
+    width: 30%;
+}
+
+.rating-box{
+    margin: 0.5em 0;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgb(204, 204, 204);
+}
+
